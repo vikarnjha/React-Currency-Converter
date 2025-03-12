@@ -3,11 +3,11 @@ import Axios from "axios";
 import Dropdown from "react-dropdown";
 import { HiSwitchHorizontal } from "react-icons/hi";
 import "react-dropdown/style.css";
-import "./Currency.css"
+import "./Currency.css";
 
 const Currency = () => {
   const [info, setInfo] = useState({});
-  const [input, setInput] = useState();
+  const [input, setInput] = useState(0);
   const [from, setFrom] = useState("inr");
   const [to, setTo] = useState("usd");
   const [options, setOptions] = useState([]);
@@ -15,7 +15,9 @@ const Currency = () => {
 
   // Fetch exchange rates when "from" currency changes
   useEffect(() => {
-    Axios.get(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${from}.json`)
+    Axios.get(
+      `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${from}.json`
+    )
       .then((res) => {
         setInfo(res.data[from] || {});
       })
@@ -52,10 +54,22 @@ const Currency = () => {
           <div className="left">
             <h3>Amount</h3>
             <input
-              type="number"
+              type="text"
               placeholder="Enter the amount"
-              value={input}
-              onChange={(e) => setInput(parseFloat(e.target.value) || 0)}
+              value={input} // Ensure the input field is controlled
+              onChange={(e) => {
+                let value = e.target.value;
+
+                // Remove leading zeros (except for "0" itself)
+                if (/^0\d+/.test(value)) {
+                  value = value.replace(/^0+/, "");
+                }
+
+                // Allow only numeric input
+                if (!isNaN(value)) {
+                  setInput(value);
+                }
+              }}
             />
           </div>
           <div className="middle">
@@ -82,7 +96,9 @@ const Currency = () => {
         </div>
         <div className="result">
           <h2>Converted Amount:</h2>
-          <p>{`${input} ${from.toUpperCase()} = ${output.toFixed(2)} ${to.toUpperCase()}`}</p>
+          <p>{`${input} ${from.toUpperCase()} = ${output.toFixed(
+            2
+          )} ${to.toUpperCase()}`}</p>
         </div>
       </div>
     </>
