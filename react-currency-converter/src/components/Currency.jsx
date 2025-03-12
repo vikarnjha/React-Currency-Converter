@@ -5,7 +5,6 @@ import { HiSwitchHorizontal } from "react-icons/hi";
 import "react-dropdown/style.css";
 import "./Currency.css";
 
-
 const Currency = () => {
   const [info, setInfo] = useState({});
   const [input, setInput] = useState(0);
@@ -89,7 +88,9 @@ const Currency = () => {
         </div>
         <div className="result">
           <h2>Converted Amount:</h2>
-          <p>{`${input || 0} ${from.toUpperCase()} = ${output.toFixed(2)} ${to.toUpperCase()}`}</p>
+          <p>{`${input || 0} ${from.toUpperCase()} = ${output.toFixed(
+            2
+          )} ${to.toUpperCase()}`}</p>
         </div>
       </div>
     </>
