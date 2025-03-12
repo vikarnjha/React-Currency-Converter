@@ -1,6 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
 import Axios from "axios";
-import Dropdown from "react-dropdown";
 import { HiSwitchHorizontal } from "react-icons/hi";
 import Select from "react-select";
 import "./Currency.css";
