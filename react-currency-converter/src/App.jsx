@@ -1,11 +1,12 @@
 import React from 'react'
 import './App.css'
+import Currency from './components/Currency'
 
 function App() {
 
   return (
     <>
-     <h1>Hello VJ</h1>
+     <Currency/>
     </>
   )
 }
