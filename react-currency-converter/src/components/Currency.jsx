@@ -7,9 +7,9 @@ import "./Currency.css"
 
 const Currency = () => {
   const [info, setInfo] = useState({});
-  const [input, setInput] = useState(0);
-  const [from, setFrom] = useState("usd");
-  const [to, setTo] = useState("inr");
+  const [input, setInput] = useState();
+  const [from, setFrom] = useState("inr");
+  const [to, setTo] = useState("usd");
   const [options, setOptions] = useState([]);
   const [output, setOutput] = useState(0);
 
