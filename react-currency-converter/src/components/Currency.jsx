@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import Axios from "axios";
 import Dropdown from "react-dropdown";
 import { HiSwitchHorizontal } from "react-icons/hi";
-// import "react-dropdown/style.css";
+import Select from "react-select";
 import "./Currency.css";
 
 const Currency = () => {
@@ -65,10 +65,13 @@ const Currency = () => {
         </div>
         <div className="middle">
           <h3>From</h3>
-          <Dropdown
-            options={options.map((code) => code.toUpperCase())} // Display uppercase
+          <Select
+            options={options.map((code) => ({
+              label: code.toUpperCase(),
+              value: code,
+            }))} // Convert to object format
             onChange={(e) => setFrom(e.value)}
-            value={from.toUpperCase()} // Ensure display is uppercase
+            value={{ label: from.toUpperCase(), value: from }} // Ensure display is uppercase
             placeholder="From"
           />
         </div>
@@ -77,10 +80,13 @@ const Currency = () => {
         </div>
         <div className="right">
           <h3>To</h3>
-          <Dropdown
-            options={options.map((code) => code.toUpperCase())} // Display uppercase
+          <Select
+            options={options.map((code) => ({
+              label: code.toUpperCase(),
+              value: code,
+            }))}
             onChange={(e) => setTo(e.value)}
-            value={to.toUpperCase()} // Ensure display is uppercase
+            value={{ label: to.toUpperCase(), value: to }}
             placeholder="To"
           />
         </div>
