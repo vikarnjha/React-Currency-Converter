@@ -1,0 +1,119 @@
+/* Currency.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.App {
+  width: 90%;
+  max-width: 500px;
+  background: #252525;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #f4a261;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left, .middle, .right {
+  flex: 1;
+  min-width: 120px;
+  margin: 10px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.switch svg {
+  color: #f4a261;
+  transition: transform 0.3s ease-in-out;
+}
+
+.switch svg:hover {
+  transform: rotate(180deg);
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #333;
+  border-radius: 10px;
+}
+
+.result h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.result p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f4a261;
+}
+
+/* Styling for the Convert Button */
+button {
+  background: #f4a261;
+  color: #000;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #e76f51;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+}

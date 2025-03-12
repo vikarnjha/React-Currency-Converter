@@ -3,6 +3,7 @@ import Axios from "axios";
 import Dropdown from "react-dropdown";
 import { HiSwitchHorizontal } from "react-icons/hi";
 import "react-dropdown/style.css";
+import "./Currency.css"
 
 const Currency = () => {
   const [info, setInfo] = useState({});
@@ -45,7 +46,7 @@ const Currency = () => {
     <>
       <div className="App">
         <div className="heading">
-          <h1>Currency Converter</h1>
+          <h1>React Currency Converter</h1>
         </div>
         <div className="container">
           <div className="left">
