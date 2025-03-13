@@ -23,7 +23,8 @@ A simple and interactive currency converter built with **React.js**, **Axios**, 
 - **API**: [Currency API](https://github.com/fawazahmed0/currency-api)  
 - **Styling**: CSS3, Flexbox  
 
-
+## 📸 **Screenshots**  
+*(![alt text](image.png))* 
 
 ## 🔧 **Installation & Setup**  
 
@@ -55,10 +56,7 @@ npm run build
 2️⃣ **Deploy using Vercel CLI**  
 
 vercel
-
-
-## 📸 **Screenshots**  
-*(![alt text](image.png))*  
+ 
 
 
 ## 👨‍💻 **Contributing**  
