@@ -5,7 +5,7 @@ React-Currency-Converter is a user-friendly web application built with React.js 
 ### **React Currency Converter** 🌍💱  
 A simple and interactive currency converter built with **React.js**, **Axios**, and **React-Select**.  
 
-![React Currency Converter](https://github.com/vikarnjha/React-Currency-Converter.git)  
+[React Currency Converter Github Repo](https://github.com/vikarnjha/React-Currency-Converter.git)  
  
 
 
